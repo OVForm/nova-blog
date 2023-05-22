@@ -24,6 +24,12 @@ class Tool extends \Laravel\Nova\Tool
         }
     }
 
+    
+    public function menu(Request $request)
+    {
+        return [];
+    }
+
     /**
      * Build the view that renders the navigation links for the tool.
      */

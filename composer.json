@@ -10,7 +10,7 @@
     }],
     "require": {
         "php": ">=7.2",
-        "laravel/scout": "^v8.0",
+        "laravel/scout": "^v9.0",
         "pmatseykanets/laravel-scout-postgres": "^v7.0"
     },
     "autoload": {

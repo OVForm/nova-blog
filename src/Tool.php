@@ -3,6 +3,7 @@
 namespace Den1n\NovaBlog;
 
 use Laravel\Nova\Nova;
+use Illuminate\Http\Request;
 
 class Tool extends \Laravel\Nova\Tool
 {

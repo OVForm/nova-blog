@@ -79,8 +79,7 @@ class Post extends Resource
                 ->help(__('A date when post will be available for viewing'))
                 ->rules('nullable', 'date')
                 ->hideFromIndex()
-                ->hideFromDetail()
-                ->firstDayOfWeek(1),
+                ->hideFromDetail(),
 
             DateTime::make(__('Created At'), 'created_at')
                 ->hideWhenCreating()

@@ -9,6 +9,7 @@ use Laravel\Nova\Fields\ActionFields;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Laravel\Nova\Fields\DateTime;
+use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Publish extends Action
 {
@@ -25,7 +26,7 @@ class Publish extends Action
     /**
      * Get the fields available on the action.
      */
-    public function fields(): array
+    public function fields(NovaRequest $request): array
     {
         return [
             DateTime::make(__('Date'), 'date'),

@@ -14,7 +14,7 @@ class Resource extends \Laravel\Nova\Resource
     /**
      * Indicates if the resource should be displayed in the sidebar.
      */
-    public static $displayInNavigation = false;
+    public static $displayInNavigation = true;
 
     /**
      * Display order of data in index table.

@@ -2,8 +2,12 @@
 
 namespace Den1n\NovaBlog;
 
+use App\Nova\User;
 use Laravel\Nova\Nova;
 use Illuminate\Http\Request;
+use Laravel\Nova\Menu\Menu;
+use Laravel\Nova\Menu\MenuSection;
+use Laravel\Nova\Menu\MenuItem;
 
 class Tool extends \Laravel\Nova\Tool
 {
@@ -25,10 +29,18 @@ class Tool extends \Laravel\Nova\Tool
         }
     }
 
-    
+
     public function menu(Request $request)
     {
-        return [];
+
+        $resources = config('nova-blog.resources');
+
+        return MenuSection::make('Blog', [
+            MenuItem::resource($resources['post']),
+            MenuItem::resource($resources['category']),
+            MenuItem::resource($resources['tag']),
+        ])->icon('user')->collapsable();
+
     }
 
     /**

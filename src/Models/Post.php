@@ -27,10 +27,10 @@ class Post extends \Illuminate\Database\Eloquent\Model
 
     protected $casts = [
         'keywords' => 'array',
+        'published_at' => 'datetime',
     ];
 
     protected $dates = [
-        'published_at',
     ];
 
     protected $hidden = [
